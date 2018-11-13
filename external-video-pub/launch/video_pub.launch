@@ -1,0 +1,8 @@
+<launch>
+    <arg name="video_path" default="none" doc="absolute path to external video" />
+
+    <node name="video_img_pub" pkg="external-video-pub" 
+        type="video_img_pub.py"  output="screen">
+        <param name="video_path_arg" value="$(arg video_path)"/>
+    </node>
+</launch>
