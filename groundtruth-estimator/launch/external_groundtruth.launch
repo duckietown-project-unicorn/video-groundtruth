@@ -1,0 +1,16 @@
+<launch>
+    <arg name="video_path" default="none" doc="absolute path to external video" />
+
+    <group>
+        <!-- Load video as image stream (Required !)-->
+        <node name="video_img_pub" pkg="external-video-pub" 
+            type="video_img_pub.py"  output="screen" required="true">
+            <param name="video_path_arg" value="$(arg video_path)"/>
+        </node>
+
+        <!-- Estimate pose based on external images -->
+        <node name="pose_estimator" pkg="groundtruth-estimator" 
+            type="pose_estimator.py" output="screen" />
+            
+    </group>
+</launch>
