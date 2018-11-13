@@ -1,0 +1,18 @@
+<package>
+  <name>groundtruth-estimator</name>
+  <version>1.2.4</version>
+  <description>
+    Estimating groundtruth based on external camera data.
+  </description>
+  <maintainer email="sischaef@ethz.ch">Simon Schaefer</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+</package>

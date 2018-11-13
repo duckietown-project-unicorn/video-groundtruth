@@ -1,0 +1,18 @@
+<package>
+  <name>external-video-pub</name>
+  <version>1.2.4</version>
+  <description>
+    Load video and publish it as image stream.
+  </description>
+  <maintainer email="sischaef@ethz.ch">Simon Schaefer</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+</package>
