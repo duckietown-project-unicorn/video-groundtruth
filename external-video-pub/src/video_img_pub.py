@@ -12,7 +12,7 @@ import rospy
 from sensor_msgs.msg import Image
 
 def main():
-    pub = rospy.Publisher('img', Image, queue_size=10)
+    pub = rospy.Publisher('external/img', Image, queue_size=10)
     rate = rospy.Rate(10) 
     video_path = str(rospy.get_param("/video_img_pub/video_path_arg"))
     if not isfile(video_path): 
@@ -27,7 +27,7 @@ def main():
             try:
                 pub.publish(bridge.cv2_to_imgmsg(frame, "bgr8"))
             except CvBridgeError as e:
-                print(e)
+                rospy.logfatal(e)
         else: 
             break
         rate.sleep()
